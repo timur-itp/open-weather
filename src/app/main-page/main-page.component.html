@@ -1,0 +1,9 @@
+<input [formControl]="cityCntrl" matInput>
+<button (click)="checkWeather()" mat-button>Search</button>
+
+<ng-container *ngIf="showOptions" style="display: flex; flex-direction: column;">
+    <div>City:  {{weather.name}}</div>
+    <div>Clouds: {{weather.clouds?.all}}</div>
+    <div>Timezone: {{weather.timezone}}</div>
+    <div>Wind speed: {{weather.wind?.speed}}</div>
+</ng-container>
